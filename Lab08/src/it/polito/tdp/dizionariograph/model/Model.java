@@ -89,13 +89,15 @@ public class Model {
 		
 		for(String s : grafo.vertexSet()) {
 
-			if(grafo.containsEdge(parolaInserita, s)) {
+			if(grafo.containsEdge(parolaInserita, s)) 
 				
 				vicine.add(s);
-			}
 		}
+		
+		return vicine;
 				
-			return vicine;
+	//		return 	Graphs.neighborListOf(grafo, parolaInserita); STESSO RISULTATO IN UNICO COMANDO
+
 	}
 
 	public String findMaxDegree() {
